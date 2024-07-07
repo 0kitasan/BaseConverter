@@ -1,25 +1,27 @@
 # BaseConverter
 
-[English](README.md) | [中文](README-zh.md)
+[中文](README.md) | [English](README-en.md)
 
-**BaseConverter** is a web-based tool that allows users to convert numbers between different bases, including binary, decimal, octal, and hexadecimal. This repository contains the source code for the BaseConverter website, which can be hosted using GitHub Pages.
+**BaseConverter** 是一个基于网页的工具，允许用户在不同的进制之间转换数字，包括二进制、十进制、八进制和十六进制。本仓库包含 BaseConverter 网站的源代码，可以使用 GitHub Pages 进行托管。
 
-## Features
+**注：本项目全部代码都由 gpt 生成。**
 
-- Convert numbers between binary, decimal, octal, and hexadecimal bases.
-- Real-time conversion as you type.
-- Clear and intuitive user interface.
-- Input validation to ensure correct number formats.
+## 特性
 
-## Demo
+- 在二进制、十进制、八进制和十六进制之间转换数字。
+- 实时转换，随输入即时更新。
+- 界面清晰直观。
+- 输入验证，确保数字格式正确。
 
-You can see a live demo of the BaseConverter website [here](https://0kitasan.github.io/BaseConverter/).
+## 演示
 
-## Project Structure
+你可以在 [这里](https://0kitasan.github.io/BaseConverter/) 查看 BaseConverter 网站的在线演示。
+
+## 项目结构
 
 ```plaintext
 BaseConverter/
-├── index.html      # Main HTML file
-├── styles.css      # CSS file for styling
-└── script.js       # JavaScript file for functionality
+├── index.html      # 主要的 HTML 文件
+├── styles.css      # 用于样式的 CSS 文件
+└── script.js       # 用于功能的 JavaScript 文件
 ```

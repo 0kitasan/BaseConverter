@@ -15,12 +15,12 @@ function convertFromDecimal() {
         return;
     }
 
-    const decimalNumber = parseInt(decimalInput, 10);
-
-    if (isNaN(decimalNumber)) {
+    if (!/^\d+$/.test(decimalInput)) {
         setInvalidInputs(['decimalInput']);
         return;
     }
+
+    const decimalNumber = parseInt(decimalInput, 10);
 
     binaryInput.value = formatBinary(decimalNumber.toString(2));
     octalInput.value = decimalNumber.toString(8);
