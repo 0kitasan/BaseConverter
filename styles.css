@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #87CEEB; /* 更改背景颜色为蓝色 */
+    background: linear-gradient(120deg, #4a90e2, #c2e9fb); /* 从左上角到右下角，左边颜色更深 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ body {
     background: #fff;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* 更深的阴影 */
     max-width: 400px;
     width: 100%;
     text-align: center;
@@ -49,10 +49,14 @@ h1 {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.input-group input:hover {
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* 悬停时的阴影效果 */
+}
+
 .input-group input:focus {
     border-color: #007BFF;
     outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* 聚焦时的阴影效果 */
 }
 
 button {
