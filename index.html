@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进制转换器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>进制转换器</h1>
+        <div class="input-group">
+            <label for="decimalInput">十进制</label>
+            <input type="text" id="decimalInput" oninput="convertFromDecimal()">
+        </div>
+        <div class="input-group">
+            <label for="binaryInput">二进制</label>
+            <input type="text" id="binaryInput" oninput="convertFromBinary()">
+        </div>
+        <div class="input-group">
+            <label for="octalInput">八进制</label>
+            <input type="text" id="octalInput" oninput="convertFromOctal()">
+        </div>
+        <div class="input-group">
+            <label for="hexInput">十六进制</label>
+            <input type="text" id="hexInput" oninput="convertFromHex()">
+        </div>
+        <button onclick="clearAllInputs()">清空</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
