@@ -1,5 +1,7 @@
 # BaseConverter
 
+[English](README.md) | [中文](README-zh.md)
+
 **BaseConverter** is a web-based tool that allows users to convert numbers between different bases, including binary, decimal, octal, and hexadecimal. This repository contains the source code for the BaseConverter website, which can be hosted using GitHub Pages.
 
 ## Features

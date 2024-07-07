@@ -1,3 +1,5 @@
+document.getElementById('binaryInput').addEventListener('input', formatBinaryInput);
+
 function convertFromDecimal() {
     const decimalInput = document.getElementById('decimalInput').value;
     const binaryInput = document.getElementById('binaryInput');
@@ -50,6 +52,8 @@ function convertFromBinary() {
     decimalInput.value = decimalNumber;
     octalInput.value = decimalNumber.toString(8);
     hexInput.value = decimalNumber.toString(16).toUpperCase();
+    // Ensure the binary input is formatted correctly
+    document.getElementById('binaryInput').value = formatBinary(decimalNumber.toString(2));
 }
 
 function convertFromOctal() {
@@ -107,7 +111,21 @@ function convertFromHex() {
 }
 
 function formatBinary(binaryString) {
-    return binaryString.replace(/(.{4})/g, '$1 ').trim();
+    // Split into groups of 4 from LSB
+    return binaryString.split('').reverse().join('').match(/.{1,4}/g).join(' ').split('').reverse().join('');
+}
+
+function formatBinaryInput(event) {
+    const input = event.target;
+    const cursorPosition = input.selectionStart;
+    const unformattedValue = input.value.replace(/\s+/g, '');
+    const formattedValue = formatBinary(unformattedValue);
+
+    input.value = formattedValue;
+
+    // Adjust cursor position to account for added spaces
+    const newCursorPosition = cursorPosition + (formattedValue.split(' ').length - Math.floor(cursorPosition / 5) - 1);
+    input.setSelectionRange(newCursorPosition, newCursorPosition);
 }
 
 function clearAllInputs() {
